@@ -1,14 +1,14 @@
 # HPC_Assignment-2
 Created a concurrent double-linked list (sorted list) using the following synchronization techniques:
- - Coarse-grain Synchronization
- - Fine-grain Synchronization
+ - Coarse-Grained Synchronization
+ - Fine-Grained Synchronization
  - Optimistic Synchronization
  - Lazy Synchronization
  - Non-blocking Synchronization
 
 Verified the performance of the concurrent data structure for different problem sizes (2 × 1000, 2 × 10000, and 2 × 100000) by varying the number of threads (1, 2, 4, 6, 8, 10, 12, 14, and 16) and workloads (0C-0I-50D, 50C-25I-25D, and 100C-0I-0D).
 
-## Coarse-grain Synchronization
+## Coarse-Grained Synchronization
 Coarse-grained synchronization involves locking the entire data structure (in this case, the entire doubly linked list) to protect it from concurrent access. When one thread acquires the lock, it has exclusive access to the entire list, preventing other threads from accessing it until the lock is released.
 
 ![download](https://github.com/Anandn3601/HPC_Assignment-2/assets/91625967/de6f2607-6bdb-4f04-950b-e146b2d1fdd8)
@@ -16,7 +16,7 @@ Coarse-grained synchronization involves locking the entire data structure (in th
 ![download](https://github.com/Anandn3601/HPC_Assignment-2/assets/91625967/dc331f6b-97f2-4002-9142-da5cf76ee68e)
 
 
-## Fine-grain Synchronization
+## Fine-Grained Synchronization
 Fine-grained synchronization divides the doubly linked list into smaller, independently locked sections. Each section (e.g., a node or a group of nodes) has its lock. Threads can operate concurrently on different sections, reducing contention.
 
 ![download](https://github.com/Anandn3601/HPC_Assignment-2/assets/91625967/a5177d91-a91c-4070-89ad-12723f5e4081)
